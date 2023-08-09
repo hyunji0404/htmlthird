@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script defer type="text/javascript" src="script.js"></script>
+        <!-- <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible"
+         content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <style> /* 캔버스 테두리 설정 */ #myCanvas{ border: 1px solid black; } -->
+          </style>
+
+         
+
+    </head>
+    <body> 
+        <div class="base">
+            <p id="wa" style="margin-top: 0px;"></p>
+                            <p id="sa" style="margin-top: 0px;"></p>
+                            <p id="da" style="margin-top: 0px;"></p>
+            <div class="intro.bg">
+                <div class="sample">
+                    <div class="what">
+                        <ul class="hap">
+                            <li><a href="#1"><strong>설명</strong></a></li>
+                            <li><a href="#2"><strong>종류</strong></a></li>
+                            <li><a href="#3"><strong>어디에 있을까?</strong></a></li>
+                            
+                        </ul>
+                        <div class="al">
+                            
+                            <div class="one">
+                        <div class="a">
+                            <p id="1">설명</p>
+                            </div>
+                           
+                                 <div class="w">
+                                    <a href="#wa">처음으로 가기</a>
+                        
+                            </div></div>
+                            <div class= "text-one">
+                                <strong>
+                                
+기하학 용어.
+
+일정한 형태의 도형들로 평면을 빈틈 없이 채우는 것. 평면작성, 타일링 등으로 불리기도 하며 '쪽매맞춤' 혹은 '쪽매붙임'으로 번역되기도 한다.
+
+같은 모양의 정다각형으로 테셀레이션을 하려면 정삼각형, 정사각형, 정육각형 밖에 불가능하지만 (이 세 개의 정다각형만이 한 각의 크기가 360의 약수이기 때문이다) ,
+ 두 가지 이상의 정다각형을 활용해서 다양한 테셀레이션을 할 수 있다. 물론 정다각형이 아닌 모양으로도 테셀레이션을 할 수 있다. 보통 타일을 몇 개 조합해 만든 일정한 형태가 반복되어 나타나게 되지만, 그런 패턴이 존재하지 않는 펜로즈 타일링(Penrose tilling) 등의 테셀레이션도 존재한다.</strong>
+                            </div><img src="도형사진.png" >
+                        
+                            </div>
+                         <div class="bl"> 
+                             <div class="two">
+                            <div class="b">
+                        
+                            <p  id="2" >
+                                종류</p></div>
+                                 <div class="s"><a href="#sa">처음으로 가기</a>
+                            </div></div> 
+                            <div class="text-two">
+                                <ul class="pop">
+                                    <li><strong>테셀레이션이 가능한 정다각형
+                                3개 이상의 꼭짓점이 한 점에서 만나야 한다. 
+                                한 내각의 크기가 360의 약수여야 한다. 따라서 정삼각형, 정사각형, 정육각형은 테셀레이션이 가능하나 정오각형이나 원과 같은 도형은 어떠한 방법으로도 빈틈이 생기거나 내부가 겹치게 되어 테셀레이션이 가능하지 않다.</strong></li>
+                                    <li>1.주기적 테셀레이션 
+                                주기적 테셀레이션은 정칙 테셀레이션과 비정칙 테셀레이션으로 나뉜다.
+                                
+                               
+                                <li>*정칙 테셀레이션: 하나의 정다각형 도형으로만 이루어진 것</li>
+                                <li>*반정칙 테셀레이션: 한 꼭짓점을 중심으로 모양이 서로 다른 정다각형으로 이루어진 것</li></li>
+                                
+                                <li>-2.비주기적 테셀레이션: 어떠한 평행이동에 대해서도 주어진 테셀레이션과 정확하게 일치하지 않는 것</li>
+                                
+                                </ul>
+
+                            </div><img src="naver1.png" width="400" >
+                        </div>
+                        <div class="cl">
+                            <div class="three">
+                        <div class="c">
+                            <p id="3" >어디에 있을까?
+                            </p>
+                        </div>
+                            <div class="d"><a href="#da">처음으로 가기</a>
+                        </div></div>
+                        <div class="text-three"><strong>같은 모양의 조각들을 서로 겹치거나 틈이 생기지 않게 늘어놓아 평면이나 공간을 덮는 것.
+                            합동변환을 이용함, 한 꼭짓점에 모이는 각은 360도이다
+                            테셀레이션 활용 예: 포장지, 궁궐의 단청, 거리의 보도블록, 욕실의 타일 바닥 등</strong>
+                            </div><img src="벌집 사진.png" width="300">
+                            <p  style="margin-top:6000px">0</p>
+                            
+                            
+
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+        
+            
+        <canvas id="myCanvas" width="1000" height="1000"></canvas>
+        <script> // 1. canvas 엘리먼트를 취득한다. 
+        const canvas = document.getElementById('myCanvas'); 
+        // 2. 2d모드의 그리기 객체를 취득한다. 
+       
+         const ctx = canvas.getContext("2d"); 
+         // 3. 이미지 객체 생성 
+         const img = new Image();
+         img.src ='새 사진.png';
+          // 4. 이미지 소스 설정 img.src = '../img/img_patrn.png'; 
+          // 5. 이미지 로드이벤트- 콜백함수 등록 
+          img.onload = function()
+          { // 이미지 그리기
+             ctx.drawImage(img, 300, 150); } 
+             </script> 
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyAEqieMCOD_EEho92mOYeNX73vLO7FIH2A",
+              authDomain: "test-189aa.firebaseapp.com",
+              projectId: "test-189aa",
+              storageBucket: "test-189aa.appspot.com",
+              messagingSenderId: "375501627564",
+              appId: "1:375501627564:web:4565d77542d88de392ff09",
+              measurementId: "G-WWPHJ5Q2F9"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+          </script>
+
+             
+          
+     
+
+        
+
+       
+
+    </body>
+    
+             
+           
+      
+
+   
+</html>
